@@ -1,0 +1,16 @@
+@mixin transitionAll($what,$duration) {
+    -webkit-transition: $what $duration;
+    -moz-transition: $what $duration;
+    -o-transition: $what $duration;
+    transition: $what $duration;
+}
+
+@mixin for-tablet {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin for-phone {
+  @media (max-width: 480px) { @content; }
+}
+@mixin for-small-phone {
+  @media (max-width: 320px) { @content; }
+}
