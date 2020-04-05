@@ -6,7 +6,7 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     background-color: $light-gray;
 }
-button,input,textarea{
+button,input,textarea,select{
     &:focus{
         outline: none;
     }
@@ -346,6 +346,12 @@ main{
                         }
                     }
                 }
+                #noposts{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $light-text;
+                    text-align: center;
+                }
             }
         }
     }
@@ -431,6 +437,19 @@ main{
                     width: 100%;
                 }
             }
+            label{
+                margin-top: 0px;
+                margin-bottom: 5px;
+                display: block;
+            }
+            select{
+                border: solid 1px #b9b9b9;
+                background: transparent;
+                height: 33px;
+                width: 150px;
+                margin-bottom: 30px;
+                font-size: 13px;
+            }
             .action-btns{
                 button{
                     border: none;
@@ -449,6 +468,12 @@ main{
                         background-color: $cancel-color;
                     }
                 }
+            }
+            .error-message{
+                display: none;
+                margin: 0px;
+                font-size: 14px;
+                color: red;
             }
         }
     }
