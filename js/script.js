@@ -7,14 +7,20 @@ function getCategories() {
         categories = data.resultData;
         let html_content = '';
         let select_content = '';
-        $.each(categories, function (i, val) {
-            html_content += '<li onclick="filterCategory(' + val.id + ')">' + val.name + '</li>';
-            select_content += '<option value="' + val.id + '">' + val.name + '</option>'
-        });
+        if(categories.length>0){
+            $.each(categories, function (i, val) {
+                html_content += '<li onclick="filterCategory(' + val.id + ')">' + val.name + '</li>';
+                select_content += '<option value="' + val.id + '">' + val.name + '</option>'
+            });
+        }
+        else{
+            html_content = '<p>No Categories</p>';
+            select_content = '<option value="0">No Category</option>'
+        }
+        
 
         $('#categories').html(html_content);
         $('#category').html(select_content)
-        console.log(categories)
     });
 }
 
@@ -74,7 +80,6 @@ function getPosts() {
     $.get(url + 'BlogPosts', function (data) {
         const posts = data.resultData.reverse();
         printPosts(posts);
-        console.log(data)
     });
 }
 

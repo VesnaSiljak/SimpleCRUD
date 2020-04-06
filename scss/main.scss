@@ -309,6 +309,7 @@ main{
                         }
                         .actions{
                             button{
+                                font-size: 11px;
                                 margin-bottom: 7px;
                                 border: none;
                                 color: $white;
@@ -429,6 +430,7 @@ main{
                 border: solid 1px $border-input;
                 padding: 10px 15px;
                 font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
                 width: 78%;
                 border-radius: 7px;
                 margin-bottom: 10px;
@@ -456,6 +458,7 @@ main{
                     color: $white;
                     padding: 10px 20px;
                     background-color: $brown;
+                    font-size: 11px;
                     width: 80px;
                     border-radius: 6px;
                     text-transform: uppercase;
